@@ -16,12 +16,10 @@ public class Hero extends LivingThing {
         super(name, hitPoint, attack);
     }
 
-    @Override
+    @Override   
     public void wounded(int damage) {
-        int hitPoint = getHitPoint();
-        hitPoint -= damage;
-        hitPointDec(hitPoint);
-        if(hitPoint <= 0) {
+        hitPointDec(getHitPoint() - damage);
+        if(getHitPoint() <= 0) {
             deadTrue(true);
             System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", getName());
         }

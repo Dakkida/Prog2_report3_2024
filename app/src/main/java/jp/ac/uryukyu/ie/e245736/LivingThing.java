@@ -10,6 +10,8 @@ public class LivingThing {
         this.name = name;
         this.hitPoint = hitPoint;
         this.attack = attack;
+        dead = false;
+        System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, hitPoint, attack);
     }
 
     public boolean isDead() {
@@ -22,6 +24,10 @@ public class LivingThing {
 
     public int getHitPoint() {
         return this.hitPoint;
+    }
+
+    public int getAttack() {
+        return this.attack;
     }
 
     public void attack(LivingThing opponent) {
