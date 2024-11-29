@@ -53,4 +53,11 @@ public class LivingThing {
     public void hitPointDec(int point) {
         this.hitPoint = point;
     }
+
+    @Override
+    public String toString() {
+        return getClass().getName() + "name" + getName() + "hitpoit" + getHitPoint() + "attack" + getAttack();
+    }
 }
+
+
